@@ -20,6 +20,9 @@ public class PatrimonioApplication {
 		endereco.setRua("Rua: Abelle Martinho Benedet");
 		System.out.println(endereco.getRua());
 
+		empresa.setEndereco(endereco);
+		System.out.println(empresa.getEndereco().getRua());
+
 		Endereco Endereco = new Endereco();
 		endereco.setNumero("Casa: 51");
 		System.out.println(endereco.getNumero());
