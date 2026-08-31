@@ -6,6 +6,7 @@ public class Bem {
     private String codigo;
     private Empresa empresa;
 
+
     public Bem(){
     }
 
