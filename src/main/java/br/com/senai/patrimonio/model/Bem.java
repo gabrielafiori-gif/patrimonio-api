@@ -1,6 +1,6 @@
 package br.com.senai.patrimonio.model;
 
-public class Bem {
+public class Bem implements BuscarEmpresaVinculada {
     private Long id;
     private String nome;
     private String codigo;
@@ -48,4 +48,10 @@ public class Bem {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+
+    @Override
+    public String getEmpresaVinulada(){
+        return empresa != null ? "Empresa: " + empresa.getNome(): "Empresa não informada";
+    }
 }
+

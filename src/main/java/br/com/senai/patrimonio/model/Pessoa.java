@@ -44,4 +44,8 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String getIdentificacao(){
+        return this.nome + " CPF: " + this.cpf + ")";
+    }
 }
