@@ -45,6 +45,14 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
+    /**
+     * Metodo com implementação padrão na super classe mas que pode ser
+     * sobrescrito com (@override) pelas subclasses
+     * ver {@link Funcionario#getIdentificacao()}.
+     * Isso caracteriza o POLIMORFISMO: a mesma chamada getIdentificacao()
+     * se comporta de forma diferente dependendo do objeto em memória
+     */
+
     public String getIdentificacao(){
         return this.nome + " CPF: " + this.cpf + ")";
     }
