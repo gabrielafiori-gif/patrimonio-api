@@ -23,6 +23,10 @@ public class Funcionario extends Pessoa implements Localizavel, BuscarEmpresaVin
         this.salasResponsavel = salasResponsavel;
     }
 
+    public Funcionario(String gabriela, int i) {
+    }
+
+
     public Cargo getCargo() {
         return cargo;
     }

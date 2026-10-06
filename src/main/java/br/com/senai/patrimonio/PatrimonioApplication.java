@@ -1,5 +1,10 @@
 package br.com.senai.patrimonio;
 
+import br.com.senai.patrimonio.atividades.Computador;
+import br.com.senai.patrimonio.atividades.Equipamento;
+import br.com.senai.patrimonio.atividades.Veiculo;
+import br.com.senai.patrimonio.atividades02.Desenvolvedor;
+import br.com.senai.patrimonio.atividades02.Gerente;
 import br.com.senai.patrimonio.avaliacao.Evento;
 import br.com.senai.patrimonio.avaliacao.Participante;
 import br.com.senai.patrimonio.avaliacao.enums.Nivel;
@@ -38,7 +43,7 @@ public class PatrimonioApplication {
 		Sala sala = new Sala();
 
 		Funcionario funcionario = new Funcionario(
-				 35L, "Gabriela", "123456",
+				35L, "Gabriela", "123456",
 				Cargo.GERENTE, empresa, sala
 		);
 		System.out.println(funcionario.getCpf());
@@ -87,10 +92,10 @@ public class PatrimonioApplication {
 
 		// TESTE DA AVALIAÇÃO AQUI
 
-	Participante participante = new Participante("Gabriela", "Gabriela@gmail.com",
-			"48367920178", "P001", Nivel.INICIANTE);
+		Participante participante = new Participante("Gabriela", "Gabriela@gmail.com",
+				"48367920178", "P001", Nivel.INICIANTE);
 
-	    System.out.println("Nome: Gabriela");
+		System.out.println("Nome: Gabriela");
 		System.out.println("Email: Gabriela@gmail.com");
 		System.out.println("Telefone: 48367920178");
 		System.out.println(participante.getMatricula());
@@ -165,23 +170,60 @@ public class PatrimonioApplication {
 		funcionario1.setCargo(Cargo.ESTAGIARIO);
 		System.out.println(funcionario1.getIdentificacao());
 
+		System.out.println(" === ");
 
+		Equipamento equipamento = new Equipamento("Impressora", 1000);
+		Equipamento computador = new Computador("Notebook", 4000);
+		Equipamento veiculo = new Veiculo("Moto", 25000);
 
-
-
-
-
-
-
-
-
-
-
-
-
+		exibirRelatorio(equipamento);
+		exibirRelatorio(computador);
+		exibirRelatorio(veiculo);
 
 	}
-}
+		public static void exibirRelatorio(Equipamento item) {
+			System.out.println("Item: " + item.getNome());
+			System.out.println("Valor inicial: " + item.getValorInicial());
+			System.out.println("Depreciacao " + item.calcularDepreciacao());
+			System.out.println(" ----------------------------------- ");
+
+			System.out.println(" === ");
+
+			br.com.senai.patrimonio.atividades02.Funcionario funcionario = new br.com.senai.patrimonio.atividades02.Funcionario
+					("Gabriela", 2000);
+			br.com.senai.patrimonio.atividades02.Funcionario gerente = new Gerente
+					("Lucas", 4000);
+			br.com.senai.patrimonio.atividades02.Funcionario desenvolvedor = new Desenvolvedor
+					("Mia", 6000);
+
+			imprimirContraCheque(funcionario);
+			imprimirContraCheque(gerente);
+			imprimirContraCheque(desenvolvedor);
+
+		   }
+
+			public static void imprimirContraCheque(br.com.senai.patrimonio.atividades02.Funcionario f){
+
+				System.out.println("Funcionário: " + f.getNome());
+				System.out.println("Salário base: R$ " + f.getSalarioBase() );
+				System.out.println("Bonificação: R$ " + f.calcularBonificacao());
+
+				double salarioTotal = f.getSalarioBase() + f.calcularBonificacao();
+				System.out.println("Salário total: R$ " + salarioTotal);
+				System.out.println(" ------------------------------------------- ");
+
+
+
+
+
+
+			}
+		}
+
+
+
+
+
 
 
 
