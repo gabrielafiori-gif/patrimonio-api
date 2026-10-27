@@ -1,6 +1,6 @@
 package br.com.senai.patrimonio.recursividade;
 
-public class Exercicio5 {
+public class InversaoString {
     public static String inverteString(String string){
         if(string == null || string.length() <= 1){
             return string;

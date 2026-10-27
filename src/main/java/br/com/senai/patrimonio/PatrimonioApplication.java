@@ -14,6 +14,7 @@ import br.com.senai.patrimonio.model.enums.Cargo;
 import br.com.senai.patrimonio.model.enums.EstadoConservacao;
 import br.com.senai.patrimonio.model.enums.Pagamento;
 import br.com.senai.patrimonio.model.enums.PagamentoComposto;
+import br.com.senai.patrimonio.recursividade.FatorialRecursivo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -199,6 +200,11 @@ public class PatrimonioApplication {
 			imprimirContraCheque(funcionario);
 			imprimirContraCheque(gerente);
 			imprimirContraCheque(desenvolvedor);
+
+			System.out.println(" === ");
+
+			System.out.println(FatorialRecursivo.fatorial(4));
+
 
 		   }
 

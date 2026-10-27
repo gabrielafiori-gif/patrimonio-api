@@ -1,6 +1,6 @@
 package br.com.senai.patrimonio.recursividade;
 
-public class Exercicio4 {
+public class ElementosVetor {
     public static int somaVetor(int[] vet, int index) {
         if (index >= vet.length) {
             return 0;

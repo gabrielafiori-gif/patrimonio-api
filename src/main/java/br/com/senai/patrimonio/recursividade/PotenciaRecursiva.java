@@ -1,6 +1,6 @@
 package br.com.senai.patrimonio.recursividade;
 
-public class Exercicio3 {
+public class PotenciaRecursiva {
     public static int potencia (int base, int expoente){
         if(expoente == 0){
             return 1;
